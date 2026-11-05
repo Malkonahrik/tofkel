@@ -1,3 +1,13 @@
+#IDE
+.vscode/
+.kate-swp
+.kdev4/
+*.kdev4
+
+#Build
+build/
+
+#Cmake
 CMakeLists.txt.user
 CMakeCache.txt
 CMakeFiles
@@ -10,6 +20,8 @@ compile_commands.json
 CTestTestfile.cmake
 _deps
 CMakeUserPresets.json
+DartConfiguration.tcl
+
 
 # CLion
 #  JetBrains specific template is maintained in a separate JetBrains.gitignore that can
