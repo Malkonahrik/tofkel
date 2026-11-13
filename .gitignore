@@ -1,7 +1,6 @@
 #IDE
-.vscode/
-.kate-swp
-.kdev4/
+*.vscode/
+*.kate-swp
 *.kdev4
 
 #Build
