@@ -1,0 +1,38 @@
+
+@startuml
+
+skinparam classAttributeIconSize 0
+hide empty attributes
+
+package "scanner" {
+    enum data_t {
+        PROTON = 0
+        WINDOW_EXEC = 1
+        LINUX_EXEC = 2
+        REGFILE = 3
+        REGDIRECTORY = 4
+        OTHER = 5
+    }
+
+    class data_s <<opaque>> {
+        +data_new(name, path, type) : data_s*
+        +data_get_name() : const char*
+        +data_get_path() : const char*
+        +data_get_type() : data_t
+        +data_set_type(type) : bool
+        +data_destroy() : void
+    }
+
+    class directory_data_s <<opaque>> {
+        +directory_data_new_empty() : directory_data_s*
+        +directory_data_destroy() : void
+        +scan_directory(path) : directory_data_s*
+    }
+
+}
+
+
+directory_data_s "1" o-- "0..*" data_s : contains
+data_s --> data_t : type
+
+@enduml
