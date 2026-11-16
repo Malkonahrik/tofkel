@@ -2,7 +2,7 @@
 #include <string.h>
 #include <unistd.h>
 
-#include "../../include/scanner/data.h"
+#include "scanner/data.h"
 
 struct data_s {
     char* name;
