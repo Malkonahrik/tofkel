@@ -13,3 +13,9 @@ add_compile_options(-std=c23 -Wall -Wextra -Wpedantic -g -fsanitize=address,unde
 add_link_options(-fsanitize=address,undefined)
 
 add_subdirectory(src)
+
+include(CTest)
+
+if(BUILD_TESTING)
+    add_subdirectory(tests)
+endif()

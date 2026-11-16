@@ -48,11 +48,26 @@ data_s* data_new(const char* name, const char* path, data_t type)
     return data;
 }
 
-const char* data_get_name(const data_s* data) { return data->name; }
+const char* data_get_name(const data_s* data)
+{
+    if (data == NULL)
+        return NULL;
+    return data->name;
+}
 
-const char* data_get_path(const data_s* data) { return data->path; }
+const char* data_get_path(const data_s* data)
+{
+    if (data == NULL)
+        return NULL;
+    return data->path;
+}
 
-data_t data_get_type(const data_s* data) { return data->type; }
+data_t data_get_type(const data_s* data)
+{
+    if (data == NULL)
+        return INVALID;
+    return data->type;
+}
 
 bool data_set_type(data_s* data, data_t type)
 {

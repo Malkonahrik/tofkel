@@ -20,6 +20,7 @@ typedef enum {
     REGFILE = 3,
     REGDIRECTORY = 4,
     OTHER = 5,
+    INVALID = -1
 } data_t;
 
 /**
@@ -60,7 +61,7 @@ const char* data_get_path(const data_s* data);
  * @brief Get the type of the data object
  * @param data a pointer of a data instance
  * @pre @p data must not be @p NULL
- * @return the type of the data object or @p NULL if @p data is @p NULL
+ * @return the type of the data object or @p INVALID if @p data is @p NULL
  **/
 data_t data_get_type(const data_s* data);
 
